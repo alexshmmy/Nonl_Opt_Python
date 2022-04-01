@@ -1,10 +1,10 @@
 # Nonlinear optimization with Python
 #
 # Optimal solution
-# f* = -3456
-# x0* = 24.0
-# x1* = 12.0
-# x2* = 12.0
+# f* = -3300
+# x0* = 20.0
+# x1* = 11.0
+# x2* = 15.0
 
 import numpy as np
 from scipy.optimize import minimize
@@ -16,10 +16,6 @@ def objective(x):
 def g1(x):
     # g1(x) >= 0
     return -x[0]-2*x[1]-2*x[2]+72.0
-
-def g2(x):
-    # g2(x) >= 0
-    return x[0]+2*x[1]+2*x[2]+0.0
 
 if __name__ == "__main__":
     # initial guesses
@@ -33,11 +29,12 @@ if __name__ == "__main__":
     print('Initial Objective: ' + str(objective(x0)))
 
     # state bounds
-    b = (0.0, 42.0)
-    bnds = (b, b, b)
+    b1 = (0.0, 20.0)
+    b2 = (0.0, 11.0)
+    b3 = (0.0, 15.0)
+    bnds = (b1, b2, b3)
     con1 = {'type': 'ineq', 'fun': g1}
-    con2 = {'type': 'ineq', 'fun': g2}
-    cons = ([con1,con2])
+    cons = ([con1])
     print("\n")
     solution = minimize(objective, x0, method='SLSQP', jac=None, bounds = bnds,
                         constraints = cons, tol = 1e-20, 
@@ -53,7 +50,6 @@ if __name__ == "__main__":
     # show constraint values over optimal solution
     print('\nFinal constraints')
     print('g_1* = ' + str(g1(z)))
-    print('g_2* = ' + str(g2(z)))
 
     # print solution
     print('\nSolution')
