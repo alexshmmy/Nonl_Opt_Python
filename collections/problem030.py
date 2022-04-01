@@ -4,6 +4,7 @@
 # f*  = 1.0
 # x0* = 1.0
 # x1* = 0.0
+# x2* = 0.0
 
 import numpy as np
 from scipy.optimize import minimize
