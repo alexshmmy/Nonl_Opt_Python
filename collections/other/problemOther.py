@@ -34,7 +34,7 @@ if __name__ == "__main__":
     x0[1] = 1.0
 
     # show initial objective
-    print('Initial Objective: ' + str(objective(x0)))
+    print('\nInitial Objective: ' + str(objective(x0)))
 
     # state bounds
     b = (-2.0, 10.0)
@@ -59,5 +59,5 @@ if __name__ == "__main__":
 
     # print solution
     print('\nSolution')
-    print('x1 = ' + str(z[0]))
-    print('x2 = ' + str(z[1]))
+    print('x1* = ' + str(z[0]))
+    print('x2* = ' + str(z[1]))

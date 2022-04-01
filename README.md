@@ -57,3 +57,7 @@ python3 problem001.py
 [4] Scipy documenation, [[Link 2]](https://docs.scipy.org/doc/scipy/reference/optimize.html).
 
 [5] Nonlinear programming with pyOpt [[Link]](https://asset-pdf.scinapse.io/prod/2012884505/2012884505.pdf).
+
+### Contact info
+
+For questions or suggestions for improvements please drop an e-mail to `alex.shmmy@gmail.com`.
