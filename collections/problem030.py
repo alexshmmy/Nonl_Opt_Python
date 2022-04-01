@@ -1,43 +1,38 @@
 # Nonlinear optimization with Python
 #
 # Optimal solution
-# f* = 17.0140172891563
-# x0* = 24.0
-# x1* = 12.0
-# x2* = 12.0
+# f*  = 1.0
+# x0* = 1.0
+# x1* = 0.0
 
 import numpy as np
 from scipy.optimize import minimize
 
 def objective(x):
     # min f(x)
-    return -x[0]*x[1]*x[2]
+    return x[0]**2+x[1]**2+x[2]**2
 
 def g1(x):
     # g1(x) >= 0
-    return -x[0]-2*x[1]-2*x[2]+72.0
-
-def g2(x):
-    # g2(x) >= 0
-    return x[0]+2*x[1]+2*x[2]+0.0
+    return x[0]**2+x[1]**2-1.0
 
 if __name__ == "__main__":
     # initial guesses
     n = 3
     x0 = np.zeros(n)
-    x0[0] = 0.1
-    x0[1] = 0.1
-    x0[2] = 0.1
+    x0[0] = 10.0
+    x0[1] = 9.5
+    x0[2] = -9.5
 
     # show initial objective
     print('Initial Objective: ' + str(objective(x0)))
 
     # state bounds
-    b = (0.0, 42.0)
-    bnds = (b, b, b)
+    b1 = (1.0, 10.0)
+    b2 = (-10.0, 10.0)
+    bnds = (b1, b2, b2)
     con1 = {'type': 'ineq', 'fun': g1}
-    con2 = {'type': 'ineq', 'fun': g2}
-    cons = ([con1,con2])
+    cons = ([con1])
     print("\n")
     solution = minimize(objective, x0, method='SLSQP', jac=None, bounds = bnds,
                         constraints = cons, tol = 1e-20, 
@@ -53,10 +48,9 @@ if __name__ == "__main__":
     # show constraint values over optimal solution
     print('\nFinal constraints')
     print('g_1* = ' + str(g1(z)))
-    print('g_2* = ' + str(g2(z)))
 
     # print solution
     print('\nSolution')
     print('x1 = ' + str(z[0]))
     print('x2 = ' + str(z[1]))
-    print('x3 = ' + str(z[2]))
+    print('x2 = ' + str(z[2]))

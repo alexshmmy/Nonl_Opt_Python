@@ -1,40 +1,39 @@
 # Nonlinear optimization with Python
 #
 # Optimal solution
-# f* = 17.0140172891563
-# x0* = 24.0
-# x1* = 12.0
-# x2* = 12.0
+# f* = -6961.813875580139
+# x0* = 14.095
+# x1* = 0.8429607892154782
 
 import numpy as np
 from scipy.optimize import minimize
 
 def objective(x):
     # min f(x)
-    return -x[0]*x[1]*x[2]
+    return (x[0]-10.0)**3+(x[1]-20.0)**3
 
 def g1(x):
     # g1(x) >= 0
-    return -x[0]-2*x[1]-2*x[2]+72.0
+    return (x[0] - 5.0)**2 + (x[1] - 5.0)**2 - 100.0
 
 def g2(x):
-    # g2(x) >= 0
-    return x[0]+2*x[1]+2*x[2]+0.0
+    # g2(x) = 0
+    return (-1)*(x[1] - 5)**2 - (x[0] - 6)**2 + 82.81
 
 if __name__ == "__main__":
     # initial guesses
-    n = 3
+    n = 2
     x0 = np.zeros(n)
-    x0[0] = 0.1
-    x0[1] = 0.1
-    x0[2] = 0.1
+    x0[0] = 90.0
+    x0[1] = 90.0
 
     # show initial objective
     print('Initial Objective: ' + str(objective(x0)))
 
     # state bounds
-    b = (0.0, 42.0)
-    bnds = (b, b, b)
+    b1 = (13.0, 100.0)
+    b2 = (0.0, 100.0)
+    bnds = (b1, b2)
     con1 = {'type': 'ineq', 'fun': g1}
     con2 = {'type': 'ineq', 'fun': g2}
     cons = ([con1,con2])
@@ -59,4 +58,3 @@ if __name__ == "__main__":
     print('\nSolution')
     print('x1 = ' + str(z[0]))
     print('x2 = ' + str(z[1]))
-    print('x3 = ' + str(z[2]))
