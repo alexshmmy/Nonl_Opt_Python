@@ -25,6 +25,7 @@ The following packages are required to run the scripts:
 
 Packages      | 
 ------------- |
+math          |
 numpy         |
 scipy         |
 
