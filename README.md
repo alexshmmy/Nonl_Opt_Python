@@ -2,25 +2,23 @@
 
 A collection of nonlinear optimization problems of the form
 
-``            min f(x)                ``
+```
+           min f(x)             
 
 subjet to   
-
-``           g_i(x) >= 0, i=1,2,...N  ``
-
-``            h_j(x) = 0,  j=1,2,...M `` 
-
-``            -lb <= x_k <= Ub, k=1,2,...n ``
+           g_i(x) >= 0,      i=1,2,...N
+           h_j(x) = 0,       j=1,2,...M 
+           -lb <= x_k <= Ub, k=1,2,...n
+```
 
 where `f(x), g_i(x), h_j(x)` are inherently nonlinear by using the for open source `scipy.optimize` Python library.
 
 ### Dependencies
 The following packages are required to run the scripts:
 
-```
-numpy
-scipy
-```
+`numpy`
+
+`scipy`
 
 The problems have been tested with `Python 3.7.4, numpy>=1.7.3, scipy>=1.4.1`.
 
@@ -32,11 +30,11 @@ The problems have been tested with `Python 3.7.4, numpy>=1.7.3, scipy>=1.4.1`.
 
 Open terminal and give the following commands:
 
-`git clone `
-
-`cd Nonl_Opt_Python/collections`
-
-`python3 problem001.py`
+```
+git clone
+cd Nonl_Opt_Python/collections
+python3 problem001.py
+```
 
 ### Other references
 
