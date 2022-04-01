@@ -29,7 +29,7 @@ math          |
 numpy         |
 scipy         |
 
-The problems have been tested with `Python 3.7.4, numpy>=1.7.3, scipy>=1.4.1`.
+The problems have been tested with `Python 3.7.4, numpy=1.7.3, scipy=1.4.1`.
 
 ### Collections of problems
 
@@ -60,4 +60,4 @@ python3 problem001.py
 
 ### Contact info
 
-For questions or suggestions for improvements please drop an e-mail to `alex.shmmy@gmail.com`.
+For questions or suggestions for improvements please drop an e-mail to `alex [dot] shmmy (at) gmail [dot] com`.
