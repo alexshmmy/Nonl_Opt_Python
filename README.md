@@ -60,6 +60,6 @@ python3 problem001.py
 
 ### Contact info
 
-For questions or suggestions for improvements please drop an e-mail to 
+For questions or suggestions for improvements please drop an e-mail to:
 
 `alex [dot] shmmy (at) gmail [dot] com`.
