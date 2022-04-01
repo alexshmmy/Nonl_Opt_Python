@@ -3,6 +3,7 @@
 # Link2: https://docs.scipy.org/doc/scipy/tutorial/optimize.html#sequential-least-squares-programming-slsqp-algorithm-method-slsqp
 # Link3: https://docs.scipy.org/doc/scipy/reference/optimize.html
 # Link4: https://asset-pdf.scinapse.io/prod/2012884505/2012884505.pdf 
+# Link5: https://www.stfmc.de/fmc/rhs/x/tlf.html
 
 import numpy as np
 from scipy.optimize import minimize
