@@ -58,6 +58,8 @@ python3 problem001.py
 
 [5] Nonlinear programming with pyOpt [[Link]](https://asset-pdf.scinapse.io/prod/2012884505/2012884505.pdf).
 
+[6] Design optimization textbook [[Link]](https://apmonitor.com/me575/index.php/Main/BookChapters).
+
 ### Contact info
 
 For questions or suggestions for improvements please drop an e-mail to:
