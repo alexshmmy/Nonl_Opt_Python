@@ -1,4 +1,4 @@
-# Nonlinear Optimizaiton with Python
+# Nonlinear Optimization with Python
 
 A collection of nonlinear optimization problems of the form
 
@@ -38,7 +38,7 @@ The problems have been tested with `Python 3.7.4, numpy>=1.7.3, scipy>=1.4.1`.
 Open terminal and give the following commands:
 
 ```
-git clone
+git clone https://github.com/alexshmmy/Nonl_Opt_Python.git
 cd Nonl_Opt_Python/collections
 python3 problem001.py
 ```
