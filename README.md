@@ -33,7 +33,7 @@ The problems have been tested with `Python 3.7.4, numpy=1.7.3, scipy=1.4.1`.
 
 ### Collections of problems
 
-`W. Hock and K. Schittkowski: Test Examples for Nonlinear Programming Codes, 1981` is widely accepted as one of the mandatory test scenarios for Nonlinear Programming codes. The 121 problems along with solutions, have been posted in [[link]](https://www.stfmc.de/fmc/rhs/x/tlf.html). In `collections` we provide some of theese benchmark problems solved by using `scipy.optimize` open source Python library.
+`W. Hock and K. Schittkowski: Test Examples for Nonlinear Programming Codes, 1981` is widely accepted as one of the mandatory test scenarios for Nonlinear Programming codes. The 121 problems along with solutions, have been posted in [[link1]](https://www.stfmc.de/fmc/rhs/x/tlf.html), [[link2]](http://www.apmath.spbu.ru/cnsa/pdf/obzor/Schittkowski_Test_problem.pdf). In `collections` we provide some of theese benchmark problems solved by using `scipy.optimize` open source Python library.
 
 ### How to run
 
@@ -50,7 +50,9 @@ python3 problem001.py
 
 [1] W. Hock and K. Schittkowski: Test Examples for Nonlinear Programming Codes, 1981.
 
-[2] Revised Hock & Schittkowski models for automatable test scenarios, [[link]](https://www.stfmc.de/fmc/rhs/x/tlf.html).
+[2a] Revised Hock & Schittkowski models for automatable test scenarios, [[link]](https://www.stfmc.de/fmc/rhs/x/tlf.html).
+
+[2β] Hock & Schittkowski nonlinear optimizaiton benchmark problems, [[link]](http://www.apmath.spbu.ru/cnsa/pdf/obzor/Schittkowski_Test_problem.pdf).
 
 [3] Scipy documentation, [[Link 1]](https://docs.scipy.org/doc/scipy/tutorial/optimize.html#sequential-least-squares-programming-slsqp-algorithm-method-slsqp).
 
