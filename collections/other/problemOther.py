@@ -1,52 +1,50 @@
 # Nonlinear optimization with Python
+# Problem 3 in paper https://asset-pdf.scinapse.io/prod/2012884505/2012884505.pdf
 #
 # Optimal solution
-# f* = 17.0140172891563
-# x0* = 1.0
-# x1* = 4.742999637264417
-# x2* = 3.821149984184874
-# x3* = 1.379408293172672
+# f* = -5.1621
+# x0* = 2.003
+# x1* = 1.006 
 
 import numpy as np
+import math
 from scipy.optimize import minimize
 
 def objective(x):
     # min f(x)
-    return x[0]*x[3]*(x[0]+x[1]+x[2])+x[2]
+    a = [3, 5, 2, 1, 7]
+    b = [5, 2, 1, 4, 9]
+    c = [1, 2, 5, 2, 3]
+    f = 0.0
+
+    for i in range(5):
+        f += -(c[i] * math.exp(-(1/math.pi)*((x[0]-a[i])**2 + (x[1]-b[i])**2)) * math.cos(math.pi*((x[0]-a[i])**2 + (x[1]-b[i])**2)))
+    
+    return f
 
 def g1(x):
     # g(x) >= 0
-    return x[0]*x[1]*x[2]*x[3]-25.0
-
-def h1(x):
-    # h(x) = 0
-    sum_eq = 40.0
-    for i in range(4):
-        sum_eq = sum_eq - x[i]**2
-    return sum_eq
+    return (x[0]+2.0)**2+(x[1]+1.0)**2-20.04895
 
 if __name__ == "__main__":
     # initial guesses
-    n = 4
+    n = 2
     x0 = np.zeros(n)
     x0[0] = 2.0
-    x0[1] = 2.0
-    x0[2] = 2.0
-    x0[3] = 2.0
+    x0[1] = 1.0
 
     # show initial objective
     print('Initial Objective: ' + str(objective(x0)))
 
     # state bounds
-    b = (1.0, 5.0)
-    bnds = (b, b, b, b)
+    b = (-2.0, 10.0)
+    bnds = (b, b)
     con1 = {'type': 'ineq', 'fun': g1}
-    con2 = {'type': 'eq', 'fun': h1}
-    cons = ([con1,con2])
+    cons = ([con1])
     print("\n")
     solution = minimize(objective, x0, method='SLSQP', jac=None, bounds = bnds,
                         constraints = cons, tol = 1e-20, 
-                        options={'maxiter': 100, 'ftol': 1e-20, 'disp': True})
+                        options={'maxiter': 1000000, 'ftol': 1e-20, 'disp': True})
     
     # z is a numpy.ndarray vector
     z = solution.x
@@ -58,11 +56,8 @@ if __name__ == "__main__":
     # show constraint values over optimal solution
     print('\nFinal constraints')
     print('g_1* = ' + str(g1(z)))
-    print('h_1* = ' + str(h1(z)))
 
     # print solution
     print('\nSolution')
     print('x1 = ' + str(z[0]))
     print('x2 = ' + str(z[1]))
-    print('x3 = ' + str(z[2]))
-    print('x4 = ' + str(z[3]))
