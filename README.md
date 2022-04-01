@@ -52,7 +52,7 @@ python3 problem001.py
 
 [2a] Revised Hock & Schittkowski models for automatable test scenarios, [[link]](https://www.stfmc.de/fmc/rhs/x/tlf.html).
 
-[2β] Hock & Schittkowski nonlinear optimizaiton benchmark problems, [[link]](http://www.apmath.spbu.ru/cnsa/pdf/obzor/Schittkowski_Test_problem.pdf).
+[2b] Hock & Schittkowski nonlinear optimizaiton benchmark problems, [[link]](http://www.apmath.spbu.ru/cnsa/pdf/obzor/Schittkowski_Test_problem.pdf).
 
 [3] Scipy documentation, [[Link 1]](https://docs.scipy.org/doc/scipy/tutorial/optimize.html#sequential-least-squares-programming-slsqp-algorithm-method-slsqp).
 
