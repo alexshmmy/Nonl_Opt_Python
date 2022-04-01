@@ -22,3 +22,11 @@ The following packages are required to run the scripts:
 `scipy`
 
 The problems have been tested with `Python 3.7.4, numpy>=1.7.3, scipy>=1.4.1`.
+
+### Collections of problems
+
+Link1: http://apmonitor.com/che263/index.php/Main/PythonOptimization
+Link2: https://docs.scipy.org/doc/scipy/tutorial/optimize.html#sequential-least-squares-programming-slsqp-algorithm-method-slsqp
+Link3: https://docs.scipy.org/doc/scipy/reference/optimize.html
+Link4: https://asset-pdf.scinapse.io/prod/2012884505/2012884505.pdf 
+Link5: https://www.stfmc.de/fmc/rhs/x/tlf.html
