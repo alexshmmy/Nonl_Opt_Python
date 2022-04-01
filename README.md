@@ -17,9 +17,10 @@ where `f(x), g_i(x), h_j(x)` are inherently nonlinear by using the for open sour
 ### Dependencies
 The following packages are required to run the scripts:
 
-`numpy`
-
-`scipy`
+```
+numpy
+scipy
+```
 
 The problems have been tested with `Python 3.7.4, numpy>=1.7.3, scipy>=1.4.1`.
 
