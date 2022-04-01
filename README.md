@@ -25,8 +25,15 @@ The problems have been tested with `Python 3.7.4, numpy>=1.7.3, scipy>=1.4.1`.
 
 ### Collections of problems
 
-Link1: http://apmonitor.com/che263/index.php/Main/PythonOptimization
-Link2: https://docs.scipy.org/doc/scipy/tutorial/optimize.html#sequential-least-squares-programming-slsqp-algorithm-method-slsqp
-Link3: https://docs.scipy.org/doc/scipy/reference/optimize.html
-Link4: https://asset-pdf.scinapse.io/prod/2012884505/2012884505.pdf 
-Link5: https://www.stfmc.de/fmc/rhs/x/tlf.html
+`W. Hock and K. Schittkowski: Test Examples for Nonlinear Programming Codes, 1981` is widely accepted as one of the mandatory test scenarios for Nonlinear Programming codes. The 121 problems along with solutions, have been posted in [link](https://www.stfmc.de/fmc/rhs/x/tlf.html)
+
+### Other references
+
+[1] http://apmonitor.com/che263/index.php/Main/PythonOptimization
+
+
+[2] adsf https://docs.scipy.org/doc/scipy/tutorial/optimize.html#sequential-least-squares-programming-slsqp-algorithm-method-slsqp
+
+[3] adsf https://docs.scipy.org/doc/scipy/reference/optimize.html
+
+[4] adsf https://asset-pdf.scinapse.io/prod/2012884505/2012884505.pdf 
