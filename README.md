@@ -62,6 +62,8 @@ python3 problem001.py
 
 [6] Design optimization textbook [[Link]](https://apmonitor.com/me575/index.php/Main/BookChapters).
 
+[7] Alex bachelor thesis
+
 ### Contact info
 
 For questions or suggestions for improvements please drop an e-mail to:
