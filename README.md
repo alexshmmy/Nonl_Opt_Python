@@ -23,11 +23,8 @@ The nonlinear optimizaiton problems are solved efficiently by using the open sou
 ### Dependencies
 The following packages are required to run the scripts:
 
-
-------------- | 
 numpy         | 
 scipy         | 
-
 
 The problems have been tested with `Python 3.7.4, numpy>=1.7.3, scipy>=1.4.1`.
 
