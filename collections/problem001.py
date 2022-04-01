@@ -1,9 +1,11 @@
 # Nonlinear optimization with Python
-# Link1: http://apmonitor.com/che263/index.php/Main/PythonOptimization
-# Link2: https://docs.scipy.org/doc/scipy/tutorial/optimize.html#sequential-least-squares-programming-slsqp-algorithm-method-slsqp
-# Link3: https://docs.scipy.org/doc/scipy/reference/optimize.html
-# Link4: https://asset-pdf.scinapse.io/prod/2012884505/2012884505.pdf 
-# Link5: https://www.stfmc.de/fmc/rhs/x/tlf.html
+#
+# Optimal solution
+# f* = 17.0140172891563
+# x0* = 1.0
+# x1* = 4.742999637264417
+# x2* = 3.821149984184874
+# x3* = 1.379408293172672
 
 import numpy as np
 from scipy.optimize import minimize
@@ -12,11 +14,11 @@ def objective(x):
     # min f(x)
     return x[0]*x[3]*(x[0]+x[1]+x[2])+x[2]
 
-def constraint1(x):
+def g1(x):
     # g(x) >= 0
     return x[0]*x[1]*x[2]*x[3]-25.0
 
-def constraint2(x):
+def h1(x):
     # h(x) = 0
     sum_eq = 40.0
     for i in range(4):
@@ -35,12 +37,13 @@ if __name__ == "__main__":
     # show initial objective
     print('Initial Objective: ' + str(objective(x0)))
 
-    # optimize
-    b = (1.0,5.0)
+    # state bounds
+    b = (1.0, 5.0)
     bnds = (b, b, b, b)
-    con1 = {'type': 'ineq', 'fun': constraint1}
-    con2 = {'type': 'eq', 'fun': constraint2}
+    con1 = {'type': 'ineq', 'fun': g1}
+    con2 = {'type': 'eq', 'fun': h1}
     cons = ([con1,con2])
+    print("\n")
     solution = minimize(objective, x0, method='SLSQP', jac=None, bounds = bnds,
                         constraints = cons, tol = 1e-20, 
                         options={'maxiter': 100, 'ftol': 1e-20, 'disp': True})
@@ -54,8 +57,8 @@ if __name__ == "__main__":
 
     # show constraint values over optimal solution
     print('\nFinal constraints')
-    print('g_1* = ' + str(constraint1(z)))
-    print('g_2* = ' + str(constraint2(z)))
+    print('g_1* = ' + str(g1(z)))
+    print('h_1* = ' + str(h1(z)))
 
     # print solution
     print('\nSolution')
