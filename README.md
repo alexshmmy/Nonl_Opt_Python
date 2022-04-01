@@ -8,10 +8,17 @@ A collection of nonlinear optimization problems of the form
 subjet to   
            g_i(x) >= 0,      i=1,2,...N
            h_j(x) = 0,       j=1,2,...M 
-           -lb <= x_k <= Ub, k=1,2,...n
+           l_k <= x_k <= U_k, k=1,2,...n
 ```
 
-where `f(x), g_i(x), h_j(x)` are inherently nonlinear by using the for open source `scipy.optimize` Python library.
+where:
+* `x` is the vector of decision variables (dimension `n`).
+* `f(x)` models the objective function to be minimized (in general nonlinear function). 
+* The functions `g_i(x)` model the inequality constraints (in general nonlinear functions).
+* The functions `h_j(x)` model the equality constraints (in general nonlinear functions). 
+* `l_k, U_k` are the lower  and upper bounds, respectively, of each deciection variables `x_k`.
+ 
+The nonlinear optimizaiton problems are solved efficiently by using the open source `scipy.optimize` Python library.
 
 ### Dependencies
 The following packages are required to run the scripts:
