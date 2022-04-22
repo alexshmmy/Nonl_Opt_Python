@@ -12,11 +12,11 @@ subjet to
 ```
 
 where:
-* `x` is the vector of decision variables (dimension `n`).
-* `f(x)` models the objective function to be minimized (in general nonlinear function). 
-* The functions `g_i(x)` model the inequality constraints (in general nonlinear functions).
-* The functions `h_j(x)` model the equality constraints (in general nonlinear functions). 
-* `l_k, U_k` are the lower  and upper bounds, respectively, of each deciection variables `x_k`.
+* $`x`$ is the vector of decision variables (dimension `n`).
+* $`f(x)`$ models the objective function to be minimized (in general nonlinear function). 
+* The functions $`g_i(x)`$ model the inequality constraints (in general nonlinear functions).
+* The functions $`h_j(x)`$ model the equality constraints (in general nonlinear functions). 
+* $`l_k, U_k`$ are the lower  and upper bounds, respectively, of each deciection variables $`x_k`$.
  
 The nonlinear optimizaiton problems are solved efficiently by using the open source `scipy.optimize` Python library.
 
